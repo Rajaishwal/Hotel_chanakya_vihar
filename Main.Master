@@ -1,0 +1,531 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Hotel_Chanakya_Vihar.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="Welcome To Hotel Chanakya Vihar" />
+    <meta name="description" content="Welcome To Hotel Chanakya Vihar" />
+
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
+
+    <%-- .......css.......... --%>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/midea.css" rel="stylesheet" />
+
+
+    <%-- ................slider....................... --%>
+    <link href="slider/css/ken-burns.css" rel="stylesheet" />
+    <script src="slider/js/jquery-2.1.4.min.js"></script>
+
+
+    <%-- .......js........... --%>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/SmoothScroll.min.js"></script>
+
+    <%-- .................menu........................... --%>
+    <script src="menu/menu/jquery.min.js"></script>
+    <script src="menu/menu/script.js"></script>
+    <link href="menu/menu/style.css" rel="stylesheet" />
+
+
+    <%-- ..........javascript: ....................... --%>
+    <script>$(function () { $(document).on("scroll", function () { if ($(window).scrollTop() > 100) { $(".scroll-top-wrapper").addClass("show") } else { $(".scroll-top-wrapper").removeClass("show") } }); $(".scroll-top-wrapper").on("click", scrollToTop) }); function scrollToTop() { verticalOffset = typeof (verticalOffset) != "undefined" ? verticalOffset : 0; element = $("body"); offset = element.offset(); offsetTop = offset.top; $("html, body").animate({ scrollTop: offsetTop }, 500, "linear") }</script>
+
+    <style>
+        .fixed {
+            position: fixed;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            background-color: #fffffff7;
+            box-shadow: -3px 13px 24px -1px rgba(0,0,0,0.3);
+            /*min-height: 65px;*/
+            z-index: 99999;
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            -ms-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+
+            .fixed .logo-sec-two-bg {
+                background: #0c76d0;
+            }
+
+            .fixed .menubar nav > ul > li > a {
+                color: #fff !important;
+            }
+
+                .fixed .menubar nav > ul > li > a:hover {
+                    color: #ffc800 !important;
+                }
+
+            .fixed .hed-logo3 {
+                display: none;
+            }
+
+            .fixed .hed-logo4 {
+                display: inherit;
+            }
+
+        .sticky {
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            -ms-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+        @media only screen and (max-width:800px) {
+            .fixed {
+                position: fixed;
+            }
+        }
+    </style>
+
+    <script>
+        $(window).scroll(function () {
+            var sticky = $('.sticky'),
+                scroll = $(window).scrollTop();
+
+            if (scroll >= 50) sticky.addClass('fixed');
+            else sticky.removeClass('fixed');
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- ................top heading....................... --%>
+        <section>
+            <div class="top-header-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="top-icons">
+                                <ul class="top-icons-ul">
+                                    <li><a href="javascript:"><i class="fa fa-map-marker " aria-hidden="true" style="color: #f4c024;"></i>&nbsp; 1955 Owagner Lane Seattle, WA 98101, USA </a></li>
+
+                                    <%-- <li><a href="javascript:"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="javascript:"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                    <li><a href="javascript:"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>--%>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="top-header-icons">
+                                <ul class="top-header-icons-ul">
+                                    <li><a href="tel:xxxxxxxxxx "><i class="fa fa-phone " aria-hidden="true"></i>&nbsp;+91 xxx xxx xxxx</a></li>
+                                    <li><a href="mailto:"><i class="fa fa-envelope " aria-hidden="true"></i>&nbsp; E-mail id here..</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <%-- <div class="border-sec">
+                            <p class="border-sec-p"></p>
+                        </div>--%>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <%-- ................menu....................... --%>
+        <section>
+            <div class="logo-sec-two sticky">
+                <div class="logo-sec-two-bg">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <div class="hed-logo">
+                                    <a class="hed-logo-defaul" href="Default.aspx">
+                                        <img src="images/logo.png" class="img-responsive hed-logo3" title="" /></a>
+
+                                    <a class="hed-logo-defaul" href="Default.aspx">
+                                        <img src="images/logo.png" class="img-responsive hed-logo4" title="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                                <div class="menu-sec">
+                                    <header>
+                                        <div class="header-wrap">
+                                            <div class="menubar">
+                                                <nav>
+                                                    <ul class="ints-ul">
+                                                        <li><a href="Default.aspx" class="default" title="">Home</a> </li>
+                                                        <li><a href="javascript:" title="" class="about">About Us</a></li>
+
+                                                        <li><a href="javascript:" class="features" title="">Special Offer</a> </li>
+                                                        <li><a href="javascript:" class="booking" title="">Booking</a>   </li>
+                                                        <li><a href="javascript:" class="facilities" title="">Facilities</a>   </li>
+
+                                                        <li><a href="javascript:" class="gal" title="galler">Gallery </a>
+                                                            <ul>
+                                                                <li><a href="javascript:" class="" title="">Image Gallery</a> </li>
+                                                                <li><a href="javascript:" class="" title="">Video Gallery</a> </li>
+                                                                <li><a href="javascript:" class="" title="">Media Coverage</a> </li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <li><a href="javascript:" class="contact" title="">Contact Us</a></li>
+
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <!-- Header Wrap -->
+                                    </header>
+                                    <!-- Header -->
+                                    <div class="responsive-header">
+
+                                        <div class="row">
+                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                <div class="logof">
+                                                    <a href="Default.aspx" class="menulogfour">
+                                                        <img src="images/logo.png" class="img-responsive" title="" /></a>
+                                                    <%--  <h3 class="logof-h3">Menu</h3>--%>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                <div class="responsive-logobar">
+                                                    <a class="menu-button" href="#" title=""><i class="fa fa-bars"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Responsive Logbar -->
+                                        <div class="responsive-menu">
+                                            <div class="responsive-menu-bg">
+                                                <div class="mob-logo">
+                                                    <img src="Images/logo2.png" class="img-responsive" title="" />
+                                                </div>
+
+                                                <a class="close-menu" href="#" title=""><i class="fa fa-remove"></i></a>
+                                            </div>
+                                            <ul class="ints-ul">
+                                                <li><a href="Default.aspx" class="default" title="">Home</a> </li>
+                                                <li><a href="javascript:" title="" class="about">About Us</a></li>
+
+                                                <li><a href="javascript:" class="features" title="">Special Offer</a> </li>
+                                                <li><a href="javascript:" class="booking" title="">Booking</a>   </li>
+                                                <li><a href="javascript:" class="facilities" title="">Facilities</a>   </li>
+
+                                                <li><a href="javascript:" class="gal" title="galler">Gallery </a>
+                                                    <ul>
+                                                        <li><a href="javascript:" class="" title="">Image Gallery</a> </li>
+                                                        <li><a href="javascript:" class="" title="">Video Gallery</a> </li>
+                                                        <li><a href="javascript:" class="" title="">Media Coverage</a> </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li><a href="javascript:" class="contact" title="">Contact Us</a></li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                                <div class="menubuttonsection">
+                                    <a class="menubuttonsection-a" href="javascript:">Booking Now</a>
+                                </div>
+                            </div>
+
+                            <section>
+                                <div class="footer-down-sec">
+                                    <div class="contaoner">
+                                        <div class="row">
+                                            <div class="col-lg-12" 
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%-- ................slider ....................... --%>
+        <div class="slider-section">
+            <div class="banner">
+                <div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000" data-pause="hover">
+
+                    <!-- Wrapper-for-Slides -->
+                    <div class="carousel-inner" role="listbox">
+
+                        <!-- First-Slide -->
+                        <div class="item active">
+                            <img src="images/slider/1.jpg" alt="" class="img-responsive" />
+                            <div class="sli-sec-clr"></div>
+                            <div class="carousel-caption kb_caption">
+                                <h3 data-animation="animated flipInX">Welcome To Hotel chanakya Vihar</h3>
+                               <p class="slider22-sec-pff"> Lorem Ipsum is simply dummy text of the printing <br />dummy text of the printing and typesetting industry. </p>
+                                 <div class="menubuttonsections1">
+                                    <a class="menubuttonsection-as2" href="javascript:">Booking Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second-Slide -->
+                        <div class="item">
+                            <img src="images/slider/2.jpg" alt="" class="img-responsive" />
+                            <div class="sli-sec-clr"></div>
+                            <div class="carousel-caption kb_caption">
+                                <h3 data-animation="animated flipInX">Welcome To Hotel Saurav Vihar</h3>
+                               <p class="slider22-sec-pff"> Lorem Ipsum is simply dummy text of the printing <br />dummy text of the printing and typesetting industry. </p>
+                                 <div class="menubuttonsections1">
+                                    <a class="menubuttonsection-as2" href="javascript:">Booking Now</a>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                        <!-- Third-Slide -->
+                        <div class="item">
+                            <img src="images/slider/3.jpg" alt="" class="img-responsive" />
+                            <div class="sli-sec-clr"></div>
+                            <div class="carousel-caption kb_caption">
+                                 <h3 data-animation="animated flipInX">Welcome To Hotel Saurav Vihar</h3>
+                               <p class="slider22-sec-pff"> Lorem Ipsum is simply dummy text of the printing <br />dummy text of the printing and typesetting industry. </p>
+                                 <div class="menubuttonsections1">
+                                    <a class="menubuttonsection-as2" href="javascript:">Booking Now</a>
+                                </div>
+                            </>
+                        </div>
+
+                    </div>
+
+                    <!-- Left-Button -->
+                    <a class="left carousel-control kb_control_left" href="#kb" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <!-- Right-Button -->
+                    <a class="right carousel-control kb_control_right" href="#kb" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+          <%-- ..........top arrow......................... --%>
+        <div class="scroll-top-wrapper">
+            <span class="scroll-top-inner">
+                <i class="fa fa-2x fa fa-long-arrow-up" style="-ms-transform: rotate(7deg); -webkit-transform: rotate(7deg); transform: rotate(-45deg)"></i>
+            </span>
+        </div>
+
+        <!-- footer.. -->
+         
+         
+        <section>
+            <div class="footer-main">
+                <div class="footer-bg">
+                    <div class="container">
+
+                            <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="foooter-default-header">
+                            <h2 class="footer-default-h2">The Chanakya</h2>
+                            <p class="footer-default-h2-p">Luxury Hotel</p>
+                        </div>
+
+                        <div class="footer-icon-main1111111">
+                            <ul class="footer-111top-icon-ul">                                
+                                     <li><a href="javascript:"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="javascript:"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                    <li><a href="javascript:"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                 <li><a href="javascript:"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                 <%-- <li><a href="javascript:"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>--%>
+                                 
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                        <div class="row">
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 clearfix wow fadeInUp" data-wow-delay=".1s">
+                                <div class="footer-title">
+                                    <div class="footer-content">
+                                        <h5 class="footer-content-h5">Quick Links</h5>
+                                    </div>
+                                    <div class="quick-links">
+                                        <ul class="quick-links-ul">
+                                            <li><a href="javascript:" title="">About Us</a></li>
+                                            <li><a href="javascript:" title="">Mission & Vision</a></li>
+                                            <li><a href="javascript:" title="">Privacy Policy</a></li>
+                                            <li><a href="javascript:" title="">Food & Drink</a></li>
+                                            <li><a href="javascript:" title="">Contact Us</a></li>
+                                            <li><a data-toggle="modal" data-target="#myModal" href="javascript:" title="">Login </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 clearfix wow fadeInUp" data-wow-delay=".1s">
+                                <div class="footer-title">
+                                    <div class="footer-content">
+                                        <h5 class="footer-content-h5">Our Services</h5>
+                                    </div>
+
+                                    <div class="quick-links">
+                                        <ul class="quick-links-ul">
+                                            <li><a href="javascript:" title="">All AC well furnished rooms</a></li>
+
+                                            <li><a href="javascript:" title="">Intercome in Every Room </a></li>
+                                            <li><a href="javascript:" title="">Laundry Service</a></li>
+                                            <li><a href="javascript:" title="">Doctor on call</a></li>
+                                            <li><a href="javascript:" title="">Hot & Cold Water</a></li>
+                                            <li><a href="javascript:" title="">Latest News</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 clearfix wow fadeInUp" data-wow-delay=".1s">
+                                <div class="footer-title">
+                                    <div class="footer-content">
+                                        <h5 class="footer-content-h5">Contact Us</h5>
+                                    </div>
+                                    <div class="footer-email">
+                                        <div class="emailbox">
+                                            <div class="email-icons"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                        </div>
+
+                                        <div class="email-text">
+                                            <a class="email-address-a" href="javascript:" title="">Jamalpur Bihar <br /> Munger</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="footer-email">
+                                        <div class="emailbox">
+                                            <div class="email-icons"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                                        </div>
+
+                                        <div class="email-text">
+                                            <a class="email-address-a" href="javascript:" title="">E-mail id here...</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="footer-email">
+                                        <div class="emailbox">
+                                            <div class="email-icons"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                                        </div>
+
+                                        <div class="email-text">
+                                            <a class="email-address-a" href="tel:+91 9334506305" title="">+91 xxxxxxxxxx</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 clearfix wow fadeInUp" data-wow-delay=".1s">
+                                <div class="footer-title">
+                                  <div class="foooter-default-header">
+                                  </div>
+                                    <div class="footer-content">
+                                        <h5 class="footer-content-h5">Facebook</h5>
+                                    </div>
+
+                                    <div class="dummyfacebook">
+
+                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=300px&height=200px&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" class="jaymalfcebook"></iframe>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer down.. -->
+        <section>
+            <div class="footer-downmain-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay=".1s">
+                            <div class="footer-down-iner">
+                                <p>© 2017 All Rights Reserved Hotel Chanakya 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay=".1s">
+                            <div class="footer-down-iner2">
+                                <p class="designer_link2">Designed &amp; Developed by -<a class="designdev-aa" href="http://www.intspvt.com/" target="_blank"> INTS</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+            
+        <!-- calender.. -->
+        <link href="calender/jqueryUI.css" rel="stylesheet" />
+        <script src="calender/jquery-ui.js"></script>
+
+        <!-- slider zoom.. -->
+        <script src="slider/js/bootstrap.js"></script>
+
+        <script>
+            $('.counter-sec-h311').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 9000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        </script>
+    </form>
+</body>
+</html>

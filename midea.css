@@ -1,0 +1,255 @@
+﻿
+
+@media only screen and (max-width:800px) {
+    .container-small {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    .padd-right {
+        padding-right: 15px !important;
+    }
+
+    .padd-left {
+        padding-left: 15px !important;
+    }
+
+    /********************start**********************************/
+    /*********top*******/
+    .top-header-icons {
+        text-align: center!important;
+    }
+
+    .top-header-icons-ul li a {
+        float: none!important;
+        text-align: center!important;
+        padding: 0px 5px 0px 5px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .top-icons {
+        text-align: center;
+    }
+
+    .top-icons-ul li {
+        float: none;
+    }
+
+        .top-icons-ul li a {
+            float: none;
+            padding: 0px 5px 0px 5px;
+            font-size: 13px;
+        }
+
+    .top-header-icons-ul {
+        margin: 0px 0px 5px 0px;
+    }
+
+    /*********logo header ****************/
+    .headersec-logo {
+        margin: 0px auto;
+    }
+
+    .hed-logo3 {
+        display: none;
+    }
+
+    .menubuttonsection {
+        text-align: center;
+        display: none;
+    }
+
+    .top-header-sec {
+        background: #060f29;
+    }
+
+    .border-sec-p {
+        background-color: #060f29;
+    }
+
+    .top-icons-ul li a i {
+        color: #ffc800;
+    }
+    .hed-logo-defaul {
+        display:none;
+    }
+
+    .kb_control_left, .kb_control_right {
+            top: 25% !important;
+    }
+
+
+
+    /********logo***********/
+    .logo-sec-two {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .top-icons-ul {
+        text-align: center;
+    }
+
+    .menu-sec {
+        border-bottom: none!important;
+    }
+
+    .logo-sec-two-bg {
+        padding: 8px 0px 8px 0px;
+        background: #ffffff;
+    }
+
+    .responsive-logobar {
+        padding: 9px 0px 8px 0px!important;
+    }
+
+
+    /***************slider***************/
+    .indicators-line > .carousel-indicators {
+        display: inherit;
+    }
+
+/************about us********************/
+    .about-default-h2 {
+     font-size: 22px;
+         margin: 0px 0px 10px 0px;
+     text-align:center;
+    }
+    .about-headingsec-p {
+        text-align:justify;
+    }
+    .about-headingsec-a {
+     margin: 10px 0px 30px 0px;
+    }
+
+    .about-default {
+            margin: 30px 0px 60px 0px;
+    }
+    .about-default {
+            margin: 30px 0px 30px 0px;
+    }
+
+    
+
+    /*******calendar*******/
+    .booking-section-head {
+            padding: 10px 0px 20px 0px;
+    }
+    .booking-section-box-p {
+            margin: 10px 0px 5px 0px;
+    }
+/***********booking************/
+.booking-psecc {
+text-align:left;
+}
+    .texbox-border-booking {
+    margin: 0px 0px 0px 0px;
+    }
+    .aboutus-pagetext {
+      margin: 20px 0px 0px 0px;
+    }
+    .bookingbuttons {
+    margin: 20px 0px 0px 0px;
+    }
+   
+    /***********explore**********/
+
+    .Explore-default-viewdetails {
+            margin: 10px 0px 20px 0px;
+            text-align:center;
+    }
+    .Explore-default {
+            padding: 30px 0px 30px 0px;
+    }
+    .Explore-default-h2 {
+        font-size:28px;
+    }
+        .Explore-default-h2:before {
+            display: none;
+        }
+.Explore-default-h2:after {
+            display: none;
+        }
+.Explore-default-h22211:before{
+     display: none;
+        }
+.Explore-default-h22211:after{
+     display: none;
+        }
+    .Explore-default-h2-p {
+        margin: 10px 0px 7px 0px;
+            font-size: 15px;
+                line-height: 24px;
+    }
+    .video-section {
+        padding: 100px 0px 247px 0px;
+    }
+    .Explore-default-h22211 {
+        font-size: 28px;
+    }
+    .Explore-default-h2-p2323 {
+        margin: 10px 0px 10px 0px;
+        line-height: 24px;
+    }
+    .counter-sec-p22 {
+        margin: 17px 0px 17px 0px;
+    }
+    .counter-sec-mai11 {
+        padding: 50px 0px 25px 0px;
+    }
+    .academic-box-inr {
+        width: auto;
+    }
+    
+    /**********footer****************/
+    .footer-main {
+        padding: 0px 0px 20px 0px;
+    }
+
+    .footer-content {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .footer-email {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .quick-links {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .footer-down-iner p {
+        text-align: center;
+    }
+
+    .footer-down-iner2 {
+        float: none;
+        margin: 5px 0px 0px 0px;
+    }
+
+    .designer_link2 {
+        text-align: center;
+    }
+
+    .footer-content-h5 {
+        font-size: 17px;
+    }
+
+    .footer-title-p {
+        text-align: justify;
+    }
+
+    .footersec-bord {
+        padding: 0px 0px 0px 0px;
+    }
+    .border-sec1212ed {
+        display: none;
+    }
+    .kb_caption {
+        display: none;
+    }
+    .about-default-h2-p {
+        font-size: 18px;
+    }
+
+}
